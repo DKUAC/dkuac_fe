@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import People from "./components/People";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
+import Suggestion from "./components/Suggestions";
 import userInfoStore from "./stores/userInfoStore";
 import "./App.css";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/suggestion" element={<Suggestion />} />
         </Routes>
       </div>
     </Router>
