@@ -7,7 +7,6 @@ const styles = {
     color: "white",
     overflowX: "hidden",
   },
-
   content: {
     flex: 1,
     padding: "2rem",

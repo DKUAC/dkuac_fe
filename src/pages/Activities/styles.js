@@ -154,7 +154,8 @@ const styles = {
     boxShadow: "0 1vw 2vw rgba(0, 0, 0, 0.2)",
     overflow: "hidden",
   },
-  activityPopupImage: {
+  activityPopupImageContainer: {
+    position: "relative",
     flex: "1", // 이미지를 가능한 최대 크기로 설정
     display: "flex",
     alignItems: "center",
@@ -224,17 +225,6 @@ const styles = {
     fontWeight: "bold",
     marginBottom: "0.5vw",
   },
-  deleteButton: {
-    backgroundColor: "red",
-    color: "white",
-    border: "none",
-    borderRadius: "4px",
-    padding: "5px 10px",
-    cursor: "pointer",
-    position: "absolute",
-    top: "10px",
-    right: "10px",
-  },
   commentHeader: {
     display: "flex",
     justifyContent: "space-between",
@@ -281,16 +271,63 @@ const styles = {
     cursor: "pointer",
   },
   deleteButton: {
-    position: "absolute",
-    top: "0.5vw",
-    right: "0.5vw", // 오른쪽 위에 위치
     backgroundColor: "red",
     color: "white",
     border: "none",
-    fontSize: "1.5vw",
+    padding: "0.3vw 1vw",
     borderRadius: "0.5vw",
     cursor: "pointer",
-    padding: "0.3vw 0.8vw",
+    fontSize: "1vw",
+    display: "flex",  
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  arrowButton: {
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    color: "white",
+    border: "none",
+    fontSize: "24px",
+    cursor: "pointer",
+    padding: "10px",
+    zIndex: 1,
+  },
+  // 왼쪽 화살표는 left에 배치
+  arrowButtonLeft: {
+    left: "10px",
+  },
+  // 오른쪽 화살표는 right에 배치
+  arrowButtonRight: {
+    right: "10px",
+  },
+  activityActionButtons: {
+    display: "flex",
+    justifyContent: "flex-end",
+    gap: "0.5vw",
+    marginTop: "10px",
+  },
+  editButton: {
+    backgroundColor: "#4CAF50",
+    color: "white",
+    border: "none",
+    padding: "0.3vw 1vw",
+    borderRadius: "0.5vw",
+    cursor: "pointer",
+    marginRight: "1vw",
+    fontSize: "1vw",
+    height: "auto",
+    display: "flex",
+    alignItems: "center",
+  },  
+  activityPopupImageContainer: {
+    position: "relative",
+    flex: "1", // 이미지를 가능한 최대 크기로 설정
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden", // 이미지가 박스 내에서 넘치지 않도록 설정
   },
 };
 
