@@ -27,11 +27,11 @@ const reviews = [
     author: "정미르",
     department: "고분자공학과 20",
   },
-  {
+  /*{
     text: "클라이밍도 하고 많은 사람들이랑 친해져서 좋아요!",
     author: "박영진",
     department: "산업보안학과 19",
-  },
+  },*/
 ];
 
 const activities = [
