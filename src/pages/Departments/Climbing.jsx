@@ -3,11 +3,13 @@ import styles from "./styles";
 import header from "../../images/정성훈.png"; // 클라이밍부장
 import executive1 from "../../images/김성진.png"; // 클라이밍집행부
 import executive2 from "../../images/이원경.png"; // 클라이밍집행부
+import executive3 from "../../images/no_image.png"; // 클라이밍집행부
 
 const totalMembers = [
   { name: "정성훈", role: "클라이밍부장", image: header, department: "SW융합학부", major: "소프트웨어학과", year: "19학번" },
   { name: "김성진", role: "클라이밍 집행부", image: executive1, department: "공과대학", major: "토목환경공학과", year: "20학번" },
   { name: "이원경", role: "클라이밍 집행부", image: executive2, department: "공연영화학부", major: "영화학과", year: "20학번" },
+  { name: "민경원", role: "클라이밍 집행부", image: executive3, department: "대학원", major: "기계공학과", year: "24학번" },
 ];
 
 function TotalDepartment() {
