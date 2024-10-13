@@ -33,7 +33,7 @@ function Activities() {
 
   // URL에서 학기 정보 가져오기
   const searchParams = new URLSearchParams(location.search);
-  const semester = searchParams.get("semester");
+  const semester = searchParams.get("semester") || "2024-2";
 
   // 활동 데이터 가져오기
   const fetchActivities = async () => {
@@ -197,31 +197,29 @@ const handleSubmit = async (e) => {
   };
 
   // 댓글 제출 처리
-  const handleCommentSubmit = async () => {
-    if (!newComment.trim()) return;
-    try {
-      const response = await authAxios.post(
-        `/activity/${selectedActivity.id}/comments`,
-        {
-          content: newComment,
-        }
-      );
-
-      if (response.status === 201) {
-        setSelectedActivity((prev) => ({
-          ...prev,
-          comments: [...prev.comments, response.data],
-        }));
-        setNewComment("");
-      } else {
-        alert("댓글 작성에 실패했습니다.");
+const handleCommentSubmit = async () => {
+  if (!newComment.trim()) return;
+  try {
+    const response = await authAxios.post(
+      `/activity/${selectedActivity.id}/comments`,
+      {
+        content: newComment,
       }
-    } catch (error) {
-      console.log("댓글 제출 중 오류가 발생했습니다:", error);
-      alert("댓글 작성 중 오류가 발생했습니다.");
-      logoutUtil();
+    );
+
+    if (response.status === 201) {
+      // 새로 작성된 댓글을 즉시 반영하기 위해 댓글 데이터를 다시 가져옴
+      fetchComments(selectedActivity.id);
+      setNewComment(""); // 입력창 초기화
+    } else {
+      alert("댓글 작성에 실패했습니다.");
     }
-  };
+  } catch (error) {
+    console.log("댓글 제출 중 오류가 발생했습니다:", error);
+    alert("댓글 작성 중 오류가 발생했습니다.");
+    logoutUtil();
+  }
+};
 
   // 댓글 삭제 처리 함수
   const handleCommentDelete = async (commentId) => {
