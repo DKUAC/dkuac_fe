@@ -8,7 +8,7 @@ import executive3 from "../../images/김서현.png"; // 등산집행부
 const totalMembers = [
   { name: "박종화", role: "등산부장", image: header, department: "공과대학", major: "전자전기공학과", year: "21학번" },
   { name: "손샘", role: "등산 집행부", image: executive1, department: "공과대학", major: "토목환경공학과", year: "21학번" },
-  { name: "강인하", role: "등산 집행부", image: executive2, department: "자연과학대학", major: "건축학과", year: "21학번" },
+  { name: "강인하", role: "등산 집행부", image: executive2, department: "공과대학", major: "건축학과", year: "21학번" },
   { name: "김서현", role: "등산 집행부", image: executive3, department: "SW융합대학", major: "컴퓨터공학과", year: "22학번" },
 ];
 
